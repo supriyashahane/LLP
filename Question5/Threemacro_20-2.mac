@@ -1,0 +1,52 @@
+section .text
+extern printf
+
+%macro printword 3
+       mov esi,%3
+
+%%pqr:	cmp esi,0
+	jz %%end1
+	mov eax,4
+	mov ebx,1
+	mov ecx,%1
+	mov edx,%2
+	int 0x80
+	
+	dec esi
+	jmp %%pqr
+%%end1:
+	%endmacro
+
+%macro printnum 3
+       	mov edx,%1
+	mov esi,%2
+	mov edi,%3
+%%pq:	cmp esi,0
+	jz %%end2
+	pusha
+	push edx
+	push edi
+	call printf
+	add esp,8
+	popa
+
+	dec esi
+	jmp %%pq
+%%end2:
+	%endmacro
+
+%macro printchar 2
+
+	mov esi,%2
+
+%%abc:	cmp esi,0
+	jz %%end
+	mov eax,4
+	mov ebx,1
+	mov ecx,%1
+	mov edx,1
+	int 0x80
+	dec esi
+	jmp %%abc
+%%end:
+	%endmacro
