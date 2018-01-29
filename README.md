@@ -1,5 +1,5 @@
 # LLP
-These is assignment complited by me in classwork in assembley
+These is assignment complited by me in classwork in assembley;follwing are realted questions:
 1. Programs like Factorial, GCD, Average, soriting, Searching, Fibonacci, Maximum, Minimum, Permutations, combinations, Array Operations (Minimum 10 Programs)
 2. String Operations without string instructions:  (Strrev, Strcpy, Substring, Palindrome, Stringlength, All Substrings)
 3. String Operations Using String Instructions : (Strrev, Strcpy, Substing, Kleen closure, Palindrome, Stringlength, All Substrings)
